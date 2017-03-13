@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="{{ asset('public/css/login-style.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/css/bootstrap.min.css') }}" />
+    </head>
+    <body>
+
+      
+            <div class="container" style="margin-top: 10%;">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="h3">Log-In</h3>
+                                <div class="container-fluid">
+                                {% for flashMessage in app.session.flashbag.get('status') %}
+                                    <div class="alert alert-danger" role="alert">
+                                        <div class ="container">{{ flashMessage }}</div>
+                                    </div>
+                                {% endfor %}
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <form action="{{ path('mrf_usuario_validar') }}" method="post" role="form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" autocomplete="off" placeholder="Username" name="username" autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block">Login <i class="glyphicon glyphicon-log-in"></i></button>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="{{ asset('public/js/jquery.min.js') }}"></script>
+            <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
+    </body>
+</html>

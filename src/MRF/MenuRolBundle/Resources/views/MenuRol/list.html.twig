@@ -1,0 +1,38 @@
+{% extends 'layout.html.twig' %} 
+
+{% block seccion2 %}<h1>MenuRols</h1> {{ parent() }}{% endblock %}
+
+{% block seccion3 %}
+
+    <h2>Listado de MenuRols</h2>
+    <a href="{{ path('mrf_menuRol_add') }}" class="btn btn-info" role="button">Agregar MenuRol</a><br><br>
+    
+    <div class="row table-responsive ">
+        {% for message in app.session.flashbag().get('mensaje') %}
+            <div class="alert alert-success">{{ message }}</div>
+        {% endfor %}
+    <table id="example" class="table table-bordered table-condensed table-hover display">
+        <thead>
+            <tr>
+                <td><b>id</b></td>
+                <td><b>Menu</b></td>
+                <td><b>Rol</b></td>
+                <td><b>Acciones</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for MenuRol in menuRol %}
+                <tr>
+                    <td>{{ MenuRol.id }}</td>
+                    <td>{{ MenuRol.menu }}</td>
+                    <td>{{ MenuRol.rol }}</td>
+                    <td>
+                        <b><a href="{{ path('mrf_menuRol_edit', {id: MenuRol.id}) }}">Editar  </a></
+                            <b><a href="{{ path('mrf_menuRol_delete', {id: MenuRol.id}) }}">eliminar</a></b>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

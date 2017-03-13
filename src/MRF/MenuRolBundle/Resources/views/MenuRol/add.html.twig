@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %} 
+
+{% block seccion2 %}MenuRol{% endblock %}
+
+{% block seccion3 %}
+    
+    <h2>Listado de MenuRol</h2>
+        {{ form_start(form)}}
+        <div >
+        {{ form_label(form.rol) }}
+        {{ form_widget(form.rol) }}
+        <span >{{ form_errors(form.rol) }}</span>
+        </div>
+        
+        <div >
+        {{ form_label(form.menu) }}
+        {{ form_widget(form.menu) }}
+        <span >{{ form_errors(form.menu) }}</span>
+        </div>
+        
+        
+        <p>
+            {{ form_widget(form.save, {'label' : 'Crear MenuRol', 'attr' : { 'class': 'btn'}}) }}
+        </p>
+    
+    {{form_end(form)}}
+{% endblock %}
+    

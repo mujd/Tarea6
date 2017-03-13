@@ -1,0 +1,54 @@
+{% extends 'layout.html.twig' %} 
+
+{% block seccion2 %}
+    <h1 class="titulo-blog">Menus</h1>
+
+{% endblock %}
+
+{% block seccion3 %}
+    
+    <div class="col-lg-4">
+        <h2 class="h2">Editar Menu</h2><hr>
+        <hr>
+        {{ form_start(form)}}
+        <div >
+        {{ form_label(form.nombre) }}
+        {{ form_widget(form.nombre, {'attr' : {'placeholder' : 'Nombre', 'class': 'form-control'}}) }}
+        <span >{{ form_errors(form.nombre) }}</span>
+        </div>
+        
+        <div >
+        {{ form_label(form.ruta) }}
+        {{ form_widget(form.ruta, {'attr' : {'placeholder' : 'Ruta', 'class': 'form-control'}}) }}
+        <span >{{ form_errors(form.ruta) }}</span>
+        </div>
+        <div >
+        {{ form_label(form.listar) }}
+        {{ form_widget(form.listar, { 'attr': {'checked': 'checked', 'class': 'form-control'} }) }}
+        <span >{{ form_errors(form.listar) }}</span>
+        </div>
+        <div >
+        {{ form_label(form.agregar) }}
+        {{ form_widget(form.agregar, {'attr' : {'placeholder' : 'Agregar', 'class': 'form-control'}}) }}
+        <span >{{ form_errors(form.agregar) }}</span>
+        </div>
+        <div >
+        {{ form_label(form.editar) }}
+        {{ form_widget(form.editar, {'attr' : {'placeholder' : 'Editar', 'class': 'form-control'}}) }}
+        <span >{{ form_errors(form.editar) }}</span>
+        </div>
+       
+        <div >
+        {{ form_label(form.eliminar) }}
+        {{ form_widget(form.eliminar, {'attr' : {'placeholder' : 'Eliminar', 'class': 'form-control'}}) }}
+        <span >{{ form_errors(form.eliminar) }}</span>
+        </div>
+        <br>
+        <p>
+            {{ form_widget(form.save, {'label' : 'Actualizar Menu', 'attr' : { 'class': 'form-control', 'class': 'btn btn-success'}}) }}
+        </p>    
+    {{form_end(form)}}
+    </div>
+    <div class="clearfix"></div>
+{% endblock %}
+    

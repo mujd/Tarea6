@@ -1,0 +1,32 @@
+mrf_usuario_list:
+    path:     /Usuario/list
+    defaults: { _controller: MRFUsuarioBundle:Usuario:list }
+mrf_usuario_add:
+    path:     /Usuario/add
+    defaults: { _controller: MRFUsuarioBundle:Usuario:add }
+mrf_usuario_create:
+    path:     /Usuario/create
+    defaults: { _controller: MRFUsuarioBundle:Usuario:create }
+    methods: POST
+mrf_usuario_edit:
+    path:     /Usuario/edit/{id}
+    defaults: { _controller: MRFUsuarioBundle:Usuario:edit }
+mrf_usuario_update:
+    path:     /Usuario/update/{id}
+    defaults: { _controller: MRFUsuarioBundle:Usuario:update }
+    methods: PUT
+mrf_usuario_delete:
+    path:     /Usuario/delete/{id}
+    defaults: { _controller: MRFUsuarioBundle:Usuario:delete }
+mrf_usuario_login:
+    path: /
+    defaults: { _controller: MRFUsuarioBundle:Usuario:login }
+mrf_usuario_logout:
+    path: /logout
+    defaults: { _controller: MRFUsuarioBundle:Usuario:logout }
+mrf_usuario_validar:
+    path: /Valida
+    defaults: { _controller: MRFUsuarioBundle:Usuario:validar }
+mrf_menu_list:
+    path:     /Usuario/Menu/list
+    defaults: { _controller: MRFUsuarioBundle:Menu:list }

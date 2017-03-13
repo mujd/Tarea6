@@ -1,0 +1,20 @@
+mrf_proveedor_list:
+    path:     /Proveedor/list
+    defaults: { _controller: MRFProveedorBundle:Proveedor:list }
+mrf_proveedor_add:
+    path:     /Proveedor/add
+    defaults: { _controller: MRFProveedorBundle:Proveedor:add }
+mrf_proveedor_create:
+    path:     /Proveedor/create
+    defaults: { _controller: MRFProveedorBundle:Proveedor:create }
+    methods: POST
+mrf_proveedor_edit:
+    path:     /Proveedor/edit/{id}
+    defaults: { _controller: MRFProveedorBundle:Proveedor:edit }
+mrf_proveedor_update:
+    path:     /Proveedor/update/{id}
+    defaults: { _controller: MRFProveedorBundle:Proveedor:update }
+    methods: PUT
+mrf_proveedor_delete:
+    path:     /Proveedor/delete/{id}
+    defaults: { _controller: MRFProveedorBundle:Proveedor:delete }

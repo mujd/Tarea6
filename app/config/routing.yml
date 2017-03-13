@@ -1,0 +1,37 @@
+
+
+mrf_menu_rol:
+    resource: "@MRFMenuRolBundle/Resources/config/routing.yml"
+    prefix:   /
+
+logout:
+    path:   /logout
+
+mrf_menu:
+    resource: "@MRFMenuBundle/Resources/config/routing.yml"
+    prefix:   /
+
+mrf_rol:
+    resource: "@MRFRolBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+mrf_usuario:
+    resource: "@MRFUsuarioBundle/Resources/config/routing.yml"
+    prefix:   /
+
+mrf_proveedor:
+    resource: "@MRFProveedorBundle/Resources/config/routing.yml"
+    prefix:   /
+
+mrf_cliente:
+    resource: "@MRFClienteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+mrf_home:
+    resource: "@MRFHomeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

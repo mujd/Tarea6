@@ -1,0 +1,20 @@
+mrf_rol_list:
+    path:     /Rol/list
+    defaults: { _controller: MRFRolBundle:Rol:list }
+mrf_rol_add:
+    path:     /Rol/add
+    defaults: { _controller: MRFRolBundle:Rol:add }
+mrf_rol_create:
+    path:     /Rol/create
+    defaults: { _controller: MRFRolBundle:Rol:create }
+    methods: POST
+mrf_rol_edit:
+    path:     /Rol/edit/{id}
+    defaults: { _controller: MRFRolBundle:Rol:edit }
+mrf_rol_update:
+    path:     /Rol/update/{id}
+    defaults: { _controller: MRFRolBundle:Rol:update }
+    methods: PUT
+mrf_rol_delete:
+    path:     /Rol/delete/{id}
+    defaults: { _controller: MRFRolBundle:Rol:delete }

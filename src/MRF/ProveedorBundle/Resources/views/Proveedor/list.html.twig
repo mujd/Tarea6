@@ -1,0 +1,51 @@
+{% extends 'layout.html.twig' %} 
+
+{% block seccion2 %}<h1 class="titulo-blog">Proveedores</h1>{% endblock %}
+
+{% block seccion3 %}
+    <link rel="stylesheet" href="{{ asset('public/css/style.css') }}"/>
+
+    <h2>Listado de Proveedores</h2><hr>
+
+    <a href="{{ path('mrf_proveedor_add') }}" class="btn btn-info" role="button">Agregar Proveedor</a><br><br>
+    <div class="row table-responsive ">
+        {% for message in app.session.flashbag().get('mensaje') %}
+            <div class="alert alert-success">{{ message }}</div>
+        {% endfor %}
+        <table id="example" class="table table-bordered table-condensed table-hover display">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombres</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Rut</th>
+                    <th>Razon Social</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Proveedor in proveedor %}
+                    <tr>
+                        <td>{{ Proveedor.id }}</td>
+                        <td>{{ Proveedor.nombres }}</td>
+                        <td>{{ Proveedor.apellidoP }}</td>
+                        <td>{{ Proveedor.apellidoM }}</td>
+                        <td>{{ Proveedor.rut }}</td>
+                        <td>{{ Proveedor.razonSocial }}</td>
+                        <td>{{ Proveedor.email }}</td>
+                        <td>{{ Proveedor.fono }}</td>
+                        <td>
+                            {% if usuarioRol == 'Administrador' %}
+                                <a class="glyphicon glyphicon-pencil" href="{{ path('mrf_proveedor_edit', {id: Proveedor.id}) }}"></a>
+                                <a class="glyphicon glyphicon-trash edel" href="{{ path('mrf_proveedor_delete', {id: Proveedor.id}) }}"></a>                            
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>        
+{% endblock %}

@@ -1,0 +1,20 @@
+mrf_menuRol_list:
+    path:     /MenuRol/list
+    defaults: { _controller: MRFMenuRolBundle:MenuRol:list }
+mrf_menuRol_add:
+    path:     /MenuRol/add
+    defaults: { _controller: MRFMenuRolBundle:MenuRol:add }
+mrf_menuRol_create:
+    path:     /MenuRol/create
+    defaults: { _controller: MRFMenuRolBundle:MenuRol:create }
+    methods: POST
+mrf_menuRol_edit:
+    path:     /MenuRol/edit/{id}
+    defaults: { _controller: MRFMenuRolBundle:MenuRol:edit }
+mrf_menuRol_update:
+    path:     /MenuRol/update/{id}
+    defaults: { _controller: MRFMenuRolBundle:MenuRol:update }
+    methods: PUT
+mrf_menuRol_delete:
+    path:     /MenuRol/delete/{id}
+    defaults: { _controller: MRFMenuRolBundle:MenuRol:delete }

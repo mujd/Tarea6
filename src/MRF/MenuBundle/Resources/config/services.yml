@@ -1,0 +1,4 @@
+services:
+#    mrf_menu.example:
+#        class: MRF\MenuBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,4 @@
+services:
+#    mrf_home.example:
+#        class: MRF\HomeBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

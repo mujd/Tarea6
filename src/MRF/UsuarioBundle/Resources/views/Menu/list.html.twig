@@ -1,0 +1,13 @@
+
+
+{% block seccion1 %}
+    
+        
+            <b class="list-group-item">{{ usuarioNombre }} {{ usuarioRol }}</b> 
+            {% for Menu in menuRol %}
+            <a href="{{Menu.menu.ruta}}" class="list-group-item">{{Menu.menu.nombre}}</a>
+             {% endfor %}
+            
+        
+{% endblock %}
+

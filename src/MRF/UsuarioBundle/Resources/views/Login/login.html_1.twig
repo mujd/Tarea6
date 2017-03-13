@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="{{ asset('public/css/login-style.css') }}">
+    </head>
+    <body>
+        
+        <div class="alar-login-form">
+            <div class="error"  align="center">
+                {% for flashMessage in app.session.flashbag.get('mensaje') %}
+                    <div class="alert" role="alert">
+                        <div class ="container">{{ flashMessage }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="alar-login-heading">
+                <h2><p>Login</p></h2>
+		</div>
+        <form action="{{ path('mrf_usuario_validar') }}" method="post" id="loginform" name="loginform">
+
+            <div class="container" >
+              <div class="ftxt">
+               <label><b>Nombre de Usuario: </b></label>
+               <input type="text" autocomplete="off" placeholder="Username" name="username" class="input" id="user_login" required name="log"><br>
+              </div>
+                <div class="ftxt">
+              <label><b>Password: </b></label>
+              <input type="password" autocomplete="off" placeholder="Password" name="password" class="input" id="user_pass" required name="pwd"><br>
+                </div>
+                <div class="fbtn">
+                <button type="submit" tabindex="100" value="Log In" class="button" id="wp-submit" name="wp-submit">Login</button>
+                </div>
+            </div>
+          </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+{% extends 'layout.html.twig' %} 
+
+{% block seccion2 %}<h1 class="titulo-blog">Proveedores</h1>{% endblock %}
+
+{% block seccion3 %}
+    <div class="col-lg-4">
+    <h2>Agregar Proveedor</h2><hr>
+        {{ form_start(form)}}
+    <div >
+            {{ form_label(form.nombres) }}
+            {{ form_widget(form.nombres, {'attr' : {'placeholder' : 'Nombre', 'class': 'form-control'}}) }}
+            <span >{{ form_errors(form.nombres) }}</span>
+        </div>
+        <div >
+            {{ form_label(form.apellidoP) }}
+            {{ form_widget(form.apellidoP, {'attr' : {'placeholder' : 'Apellido Paterno', 'class': 'form-control'}}) }}
+            <span >{{ form_errors(form.apellidoP) }}</span>
+        </div>
+        <div >
+            {{ form_label(form.apellidoM) }}
+            {{ form_widget(form.apellidoM, {'attr' : {'placeholder' : 'Apellido materno', 'class': 'form-control'}}) }}
+            <span >{{ form_errors(form.apellidoM) }}</span>
+        </div>
+        <div >
+            {{ form_label(form.rut) }}
+            {{ form_widget(form.rut, {'attr' : {'placeholder' : 'Rut', 'class': 'form-control'}}) }}
+            <span >{{ form_errors(form.rut) }}</span>
+        </div>
+        <div >
+            {{ form_label(form.razonSocial) }}
+            {{ form_widget(form.razonSocial, {'attr' : {'placeholder' : 'razonSocial', 'class': 'form-control'}}) }}
+            <span >{{ form_errors(form.razonSocial) }}</span>
+        </div>
+        <div >
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email, {'attr' : {'placeholder' : 'Email', 'class': 'form-control'}}) }}
+            <span >{{ form_errors(form.email) }}</span>
+        </div>
+        <div >
+            {{ form_label(form.fono) }}
+            {{ form_widget(form.fono, {'attr' : {'placeholder' : 'Telefono', 'max': largoFono, 'class': 'form-control' }}) }}
+            <span >{{ form_errors(form.rut) }}</span>
+        </div>
+        <br>
+        <p>
+            {{ form_widget(form.save, {'label' : 'Agregar Proveedor', 'attr' : {'class': 'form-control', 'class': 'btn btn-success'}}) }}
+        </p>    
+    {{form_end(form)}}
+    </div>
+    <div class="clearfix"></div>
+{% endblock %}
+    

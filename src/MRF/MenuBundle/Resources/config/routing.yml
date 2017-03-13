@@ -1,0 +1,20 @@
+mrf_menus_list:
+    path:     /Menu/list
+    defaults: { _controller: MRFMenuBundle:Menu:list }
+mrf_menu_add:
+    path:     /Menu/add
+    defaults: { _controller: MRFMenuBundle:Menu:add }
+mrf_menu_create:
+    path:     /Menu/create
+    defaults: { _controller: MRFMenuBundle:Menu:create }
+    methods: POST
+mrf_menu_edit:
+    path:     /Menu/edit/{id}
+    defaults: { _controller: MRFMenuBundle:Menu:edit }
+mrf_menu_update:
+    path:     /Menu/update/{id}
+    defaults: { _controller: MRFMenuBundle:Menu:update }
+    methods: PUT
+mrf_menu_delete:
+    path:     /Menu/delete/{id}
+    defaults: { _controller: MRFMenuBundle:Menu:delete }
